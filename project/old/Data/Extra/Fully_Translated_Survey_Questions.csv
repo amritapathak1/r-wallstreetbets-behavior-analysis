@@ -1,0 +1,64 @@
+Variable,Question Text / Label,Question Text / Label (English)
+CASE,Interview-Nummer (fortlaufend),Interview Number (sequential)
+SERIAL,Seriennummer (sofern verwendet),Serial Number (if used)
+REF,Referenz (sofern im Link angegeben),Reference (if specified in link)
+QUESTNNR,"Fragebogen, der im Interview verwendet wurde",Questionnaire used in the interview
+MODE,Interview-Modus,Interview Mode
+STARTED,Zeitpunkt zu dem das Interview begonnen hat,Time the interview started
+SE01_01,Seat: Sitzplatznummer,Seat: Seat number
+AF01,tradingfrequency,tradingfrequency
+AF02,delegation,delegation
+AF06_01,trustadvisor: [Keine Beschreibung] 01,Trust in advisor
+AF04_01,patience: [Keine Beschreibung] 01,Patience
+AF05_01,riskattitude: [Keine Beschreibung] 01,Risk attitude
+PR01_01,Frage1: [01],Question 1
+PR02_01,Frage2: [01],Question 2
+PR03_01,Frage3: [01],Question 3
+PR04_01,Frage4: [01],Question 4
+PR05_01,Frage5: [01],Question 5
+PR06_01,IV01: scenario,IV01: Scenario
+EM01,goodmood,Good mood
+EM03_01,fear: [Keine Beschreibung] 01,Fear
+IA01_01,investambiguity_ratio:  ... Euro,investambiguity_ratio:  ... Euro
+IA02_01,guessballs:  ... Prozent,guessballs:  ... Prozent
+IR01_01,investrisk_ratio:  ... Euro,investrisk_ratio:  ... Euro
+WF01_01,"optimism: Insgesamt erwarte ich, dass mir mehr gute als schlechte Dinge passieren.","optimism: Insgesamt erwarte ich, dass mir mehr gute als schlechte Dinge passieren."
+WF02_01,"jobsecurity: Es ist wahrscheinlich, dass ich nach dem Studium einen Job finde.","jobsecurity: Es ist wahrscheinlich, dass ich nach dem Studium einen Job finde."
+WF03_01,bullish: [Keine Beschreibung] 01,bullish: [Keine Beschreibung] 01
+FQ01,literacy1,literacy1
+FQ02,literacy2,literacy2
+FQ03,literacy3,literacy3
+FQ04,literacy4,literacy4
+FQ05,confidenceliteracy,confidenceliteracy
+SD02_01,age: Ich bin   ... Jahre,age: Ich bin   ... Jahre
+SD01,gender,gender
+SD08_01,nationality: Ich komme aus,nationality: Ich komme aus
+SD15_01,study program: [01],study program: [01]
+SD16,income,income
+SD18_01,comments: [01],comments: [01]
+TIME001,Verweildauer Seite 1,Verweildauer Seite 1
+TIME002,Verweildauer Seite 2,Verweildauer Seite 2
+TIME003,Verweildauer Seite 3,Verweildauer Seite 3
+TIME004,Verweildauer Seite 4,Verweildauer Seite 4
+TIME005,Verweildauer Seite 5,Verweildauer Seite 5
+TIME006,Verweildauer Seite 6,Verweildauer Seite 6
+TIME007,Verweildauer Seite 7,Verweildauer Seite 7
+TIME008,Verweildauer Seite 8,Verweildauer Seite 8
+TIME009,Verweildauer Seite 9,Verweildauer Seite 9
+TIME010,Verweildauer Seite 10,Verweildauer Seite 10
+TIME011,Verweildauer Seite 11,Verweildauer Seite 11
+TIME012,Verweildauer Seite 12,Verweildauer Seite 12
+TIME013,Verweildauer Seite 13,Verweildauer Seite 13
+TIME014,Verweildauer Seite 14,Verweildauer Seite 14
+TIME_SUM,Verweildauer gesamt (ohne Ausreißer),Verweildauer gesamt (ohne Ausreißer)
+MAILSENT,Versandzeitpunkt der Einladungsmail (nur für nicht-anonyme Adressaten),Versandzeitpunkt der Einladungsmail (nur für nicht-anonyme Adressaten)
+LASTDATA,Zeitpunkt als der Datensatz das letzte mal geändert wurde,Timestamp of last dataset modification
+FINISHED,Wurde die Befragung abgeschlossen (letzte Seite erreicht)?,Wurde die Befragung abgeschlossen (letzte Seite erreicht)?
+Q_VIEWER,"Hat der Teilnehmer den Fragebogen nur angesehen, ohne die Pflichtfragen zu beantworten?","Hat der Teilnehmer den Fragebogen nur angesehen, ohne die Pflichtfragen zu beantworten?"
+LASTPAGE,"Seite, die der Teilnehmer zuletzt bearbeitet hat",Last page worked on by the participant
+MAXPAGE,"Letzte Seite, die im Fragebogen bearbeitet wurde",Last page completed in the questionnaire
+MISSING,Anteil fehlender Antworten in Prozent,Percentage of missing responses
+MISSREL,Anteil fehlender Antworten (gewichtet nach Relevanz),Weighted percentage of missing responses
+DEG_MISS,Maluspunkte für fehlende Antworten,Penalty points for missing responses
+DEG_TIME,Maluspunkte für schnelles Ausfüllen,Penalty points for completing too quickly
+DEGRADE,Maluspunkte gesamt,Total penalty points
