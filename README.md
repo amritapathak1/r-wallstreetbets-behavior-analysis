@@ -1,9 +1,8 @@
-[README(12).md](https://github.com/user-attachments/files/28815014/README.12.md)
 # r/wallstreetbets Behavior Analysis
 
 ## Overview
 
-This repository is a portfolio-style data analysis project examining how collective attention, emotion, and language evolved in Reddit trading communities during the 2020–2022 period, with special focus on the GameStop / r/wallstreetbets surge in January 2021.
+This repository is a data analysis project examining how collective attention, emotion, and language evolved in Reddit trading communities during the 2020–2022 period, with special focus on the GameStop / r/wallstreetbets surge in January 2021.
 
 The project originally began as coursework, but was later expanded into a fuller independent portfolio project with a more complete data pipeline, preprocessing workflow, exploratory analysis, sentiment analysis, and discourse-regime modeling.
 
@@ -42,17 +41,6 @@ r-wallstreetbets-behavior-analysis/
 │   ├── 03_EDA.ipynb
 │   ├── 04_detailed_sentiment_analysis.ipynb
 │   └── 05_discourse_regimes_core.ipynb.ipynb
-│
-├── Previous_Course_Work/
-│   ├── itr1_FindingSimilarItems/
-│   ├── itr3_MiningFrequentItemsets/
-│   ├── itr4_DimensionReductionandClustering/
-│   ├── itr7_TimeSeriesAnalysis/
-│   └── project/
-│
-├── scraper/
-├── Midway.md
-└── midway_spark_jupyter.md
 ```
 
 ---
@@ -71,15 +59,6 @@ This is the primary portfolio project folder. It contains the end-to-end analysi
 | `04_detailed_sentiment_analysis.ipynb` | Applies VADER sentiment analysis to submissions and comments, then compares sentiment across years, months, content types, spike days, and the GameStop period. |
 | `05_discourse_regimes_core.ipynb.ipynb` | Uses TF-IDF, PCA, and KMeans clustering to identify broader discourse regimes and examine how linguistic patterns shift over time. |
 
----
-
-## Background Folder
-
-### `Previous_Course_Work/`
-
-This folder contains earlier course exercises and project work that helped lead into the larger portfolio project. It is included for transparency and context, but it should not be treated as the main deliverable.
-
-The current project should be evaluated through the `Data_Analysis/` folder.
 
 ---
 
@@ -124,98 +103,7 @@ Main methods used:
 
 ---
 
-## Key Results
-
-### 1. The GameStop period appears as a concentrated attention shock
-
-The strongest pattern is not a slow, steady rise in discussion. Instead, activity and participation spike sharply around late January 2021.
-
-The analysis shows:
-
-- Large increases in posting and commenting volume
-- Sharp increases in unique authors
-- Higher comments-per-submission during spike periods
-- Concentrated activity around GameStop-related language
-
-This supports the interpretation that the GameStop episode was a burst of collective attention rather than ordinary growth in subreddit activity.
-
----
-
-### 2. Participation expanded dramatically during the GameStop window
-
-The sentiment notebook compares three windows:
-
-| Window | Submissions | Average VADER Sentiment | Unique Authors |
-|---|---:|---:|---:|
-| Pre-GME window, 2020-11-01 to 2021-01-15 | 49,285 | 0.104 | 27,989 |
-| GME peak window, 2021-01-16 to 2021-02-15 | 597,400 | 0.051 | 375,529 |
-| Post-GME window, 2021-02-16 to 2021-04-30 | 179,030 | 0.095 | 113,470 |
-
-The GameStop window had far more submissions and unique authors than both the pre- and post-event periods. This indicates a major expansion in participation, not just more activity from the same users.
-
----
-
-### 3. Sentiment was slightly positive overall, but not the main signal
-
-The VADER sentiment analysis found that average sentiment was slightly positive across both submissions and comments:
-
-| Content Type | Count | Mean VADER Sentiment | Standard Deviation |
-|---|---:|---:|---:|
-| Submissions | 1,371,852 | 0.075 | 0.371 |
-| Comments | 54,429,003 | 0.045 | 0.410 |
-
-However, the project finds that average sentiment alone does not explain the GameStop moment. The more important signal is the combination of:
-
-- extreme volume spikes,
-- rapid participation growth,
-- emotionally heterogeneous discussion,
-- and topic concentration around shared tickers and actions.
-
-In other words, the GameStop period was not simply “more positive” or “more negative.” It was more intense, more crowded, and more coordinated.
-
----
-
-### 4. Spike days were more emotionally charged and heterogeneous
-
-High-volume days were not uniformly positive or negative. Instead, they showed more volatility and variation in emotional tone.
-
-This suggests that collective attention events on r/wallstreetbets are better understood as emotionally charged, fast-moving discourse moments rather than simple sentiment shifts.
-
----
-
-### 5. Language became more concentrated around shared targets
-
-During spike periods, the vocabulary shifted toward ticker- and action-oriented language, including terms such as:
-
-- `GME`
-- `hold`
-- `short squeeze`
-- `diamond hands`
-- `paper hands`
-- `AMC`
-
-Baseline language outside spike windows was broader and less synchronized. This supports the idea that major market events narrowed the community’s attention around shared symbols, narratives, and trading actions.
-
----
-
-### 6. Discourse-regime modeling found separable language patterns
-
-The discourse-regime notebook uses TF-IDF, PCA, and KMeans clustering to group large-scale Reddit text into broader language regimes.
-
-Cluster evaluation showed high silhouette scores across several values of `k`:
-
-| Number of Clusters | Silhouette Score |
-|---:|---:|
-| 3 | 0.9999 |
-| 4 | 0.9845 |
-| 5 | 0.9851 |
-| 6 | 0.9864 |
-
-The notebook treats this as a descriptive exercise rather than causal modeling. The goal is to map how dominant discourse patterns shift over time and how linguistic convergence or diversity changes around major market events.
-
----
-
-## Main Interpretation
+## Results and Interpretation
 
 The project’s central finding is that the GameStop / r/wallstreetbets event is best understood as a **collective attention shock**.
 
@@ -228,54 +116,6 @@ The evidence points to a moment where:
 - and sentiment became emotionally varied rather than uniformly positive or negative.
 
 This suggests that online financial behavior during major market events cannot be explained only through price movement or average sentiment. The social structure of attention — who participates, how quickly discourse concentrates, and which narratives become dominant — is central to understanding the event.
-
----
-
-## How to Run
-
-This project is designed for a PySpark environment, such as a cluster or high-performance computing setup.
-
-General workflow:
-
-1. Run `01_datapipeline.ipynb` to load raw Reddit data and save raw Parquet files.
-2. Run `02_preprocessing.ipynb` to generate cleaned submissions and comments.
-3. Run `03_EDA.ipynb` to inspect activity, engagement, and language patterns.
-4. Run `04_detailed_sentiment_analysis.ipynb` to generate and analyze VADER sentiment outputs.
-5. Run `05_discourse_regimes_core.ipynb.ipynb` to build text features and cluster discourse regimes.
-
-The project includes Midway-related notes:
-
-- `Midway.md`
-- `midway_spark_jupyter.md`
-
-These provide environment guidance for running Spark notebooks on a computing cluster.
-
----
-
-## Tools and Libraries
-
-Core tools used in the project include:
-
-- Python
-- PySpark
-- Spark SQL
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- VADER Sentiment
-- Spark MLlib
-- TF-IDF
-- PCA
-- KMeans
-
----
-
-## Portfolio Note
-
-This project began as a course-based exploration of Reddit and market behavior, but it was later developed into a more complete portfolio project. The earlier coursework is preserved in `Previous_Course_Work/`, while the main project work is organized in `Data_Analysis/`.
-
-For portfolio review, please focus on the cleaned, expanded analysis in `Data_Analysis/`, especially the sequence from data pipeline to preprocessing, EDA, sentiment analysis, and discourse-regime modeling.
 
 ---
 
