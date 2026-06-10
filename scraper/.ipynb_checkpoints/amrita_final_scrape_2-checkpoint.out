@@ -1,0 +1,2 @@
+Requirement already satisfied: zstandard in /software/python-anaconda-2023.09-el8-x86_64/envs/rapids-24.12/lib/python3.12/site-packages (0.23.0)
+Running scraper.py for YEAR=2020, months 7-9

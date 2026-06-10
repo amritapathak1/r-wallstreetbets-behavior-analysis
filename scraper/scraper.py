@@ -4,7 +4,6 @@ import os
 import json
 from datetime import datetime
 
-
 def read_and_decode(reader, chunk_size, max_window_size, previous_chunk=None, bytes_read=0):
 	chunk = reader.read(chunk_size)
 	bytes_read += chunk_size
@@ -45,8 +44,11 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
     source_path = "/project/jevans/hongkai/reddit"
-    dest_path = "/project/macs40123/amritap1/data"
-	
+    dest_path = "/project/macss/amritap1/redditproject/data"
+
+    os.makedirs(f"{dest_path}/submissions", exist_ok=True)
+    os.makedirs(f"{dest_path}/comments", exist_ok=True)
+    
     for filetype, src in [("RS", "submissions"), ("RC", "comments")]:
         for month in range(args.start_month, args.end_month + 1):
             filename = f"{filetype}_{args.year}-{month:02d}"

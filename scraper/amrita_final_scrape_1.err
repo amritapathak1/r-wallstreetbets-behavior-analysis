@@ -1,0 +1,5 @@
+Loading python/anaconda-2022.05
+  ERROR: python/anaconda-2022.05 cannot be loaded due to a conflict.
+    HINT: Might try "module unload python" first.
+/project/macss/amritap1/redditproject/r-wallstreetbets-behavior-analysis/scraper/./scraper.py:68: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
+  created = datetime.utcfromtimestamp(int(obj['created_utc']))
